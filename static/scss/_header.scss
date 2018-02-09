@@ -1,0 +1,83 @@
+// '_header.scss'
+
+@import 'defaultVariables';
+
+.header {
+	position: fixed;
+	z-index: 10000;
+	box-shadow: 0 1px 5px #000;
+
+	.topHeader {
+		background-color: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		.filler {
+			width: 5vw;
+		}
+
+		.nowrap a {
+			padding: 0 1vw;
+		}
+
+		a {
+			font-size: 2.5vw;
+			color: $primary-color;
+			display: inline-block;
+			.h {
+				text-align: center;
+				display: inline-block;
+				[class*="brand"] {
+					margin: 0;
+				}
+				h1 {
+					font-size: 3rem;
+					text-transform: lowercase;
+				}
+				h2 {
+					font-size: 1.4rem;
+					text-transform: uppercase;
+					color: $secondary-color;
+					margin-top: 15px;
+
+				}
+			}
+		}
+
+		a:hover, a:visited:hover {
+			color: lighten($primary-color, 15%);
+
+			h2 {
+				color: lighten($secondary-color, 15%);
+			}
+		}
+		@media only screen  and (max-width: 991px) {
+			a, h1 {
+				font-size: 1.4rem;
+			}
+			h2 {
+				font-size: 0.9rem;
+			}
+			.fa {
+				font-size: 1.8rem;
+			}
+		}
+		
+	}
+
+
+	.img-container {
+		position: relative;
+		width: 100vw;
+		height: 30vw;
+		background-image: url(/static/img/stage1.jpg);
+		background-position: 0% 75%;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		display: flex;
+		align-content: center;
+	}
+}

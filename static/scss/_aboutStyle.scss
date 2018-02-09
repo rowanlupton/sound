@@ -1,0 +1,12 @@
+// '_aboutStyle.scss'
+
+@import 'defaultVariables';
+
+#about.section {
+	color: #fff;
+	background-color: $primary-color;
+
+	a {
+		color: lighten($secondary-color, 30%);
+	}
+}

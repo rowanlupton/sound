@@ -1,0 +1,25 @@
+// '_homeStyle.scss'
+
+#home.section {
+	.picture {
+		border-radius: 50%;
+		overflow: hidden;
+		width: 20vw;
+		min-width: 12em;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.blurb {
+		text-align: center;
+		max-width: 30vw;
+		min-width: 12em;
+
+		p {
+			width: inherit;
+			min-width: inherit;
+		}
+	}
+}
