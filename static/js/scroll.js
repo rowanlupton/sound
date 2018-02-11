@@ -1,14 +1,18 @@
 function initialSize () {
-	var headerHeight = document.querySelector('header').clientHeight;
-	var windowHeight = window.innerHeight;
 	var oneVW = 0.01 * window.innerWidth;
 	var oneVH = 0.01 * window.innerHeight;
+	var headerHeight = document.querySelector('header>#topHeader').clientHeight + 30 * oneVW;
+	var windowHeight = window.innerHeight;
 
+	document.querySelector('header').style.position = 'fixed';
+	document.querySelector('header>.img-container').style.height = '30vw';
+	document.querySelector('nav').style.display = 'block';
+	document.querySelector('section#home').style.marginTop = headerHeight + 'px';
 	document.querySelector('section#home').style.minHeight = windowHeight - headerHeight + 'px';
 
 	var newHeaderHeight = document.getElementById('topHeader').clientHeight + 10 * oneVW;
 	var sectionHeight = window.innerHeight - newHeaderHeight;
-	fullHeightSections = document.querySelectorAll('section.full-height')
+	var fullHeightSections = document.querySelectorAll('section.full-height')
 	for (var i = 0; i < fullHeightSections.length; i++) {
 		fullHeightSections[i].style.minHeight = sectionHeight + 'px';
 	}
@@ -22,6 +26,8 @@ function scroll () {
 
 	var breakPoint = 20 * oneVW;
 
+	console.log(currentScroll)
+
 	if (currentScroll < 1) {
 		maxHeight = 30 * oneVW + 'px';
 	} else if (currentScroll < breakPoint) {
@@ -30,11 +36,8 @@ function scroll () {
 		maxHeight = 10 * oneVW + 'px';
 	};
 	
-	// img.style.height = maxHeight;
 	img.animate({height: [currentHeight, maxHeight]},
 				 {fill: 'forwards'});
-	// console.log(maxHeight.replace('px', '').replace('vw', ''))
-	// document.querySelector('header').style.height = parseInt(maxHeight.replace('px', '')) + document.querySelector('header>#topHeader').clientHeight + 'px';
 
 } window.addEventListener('scroll', scroll);
 

@@ -1,11 +1,13 @@
 #grid-wrapper {
     display: grid;
-    grid-template: repeat(4, auto) / 2fr 8fr 1fr;
+    grid-template-columns: 2fr 8fr 1fr;
+    grid-gap: 0 0;
 
     header {
         position: sticky;
         top: 0;
-        grid-column: 1 / 6;
+        width: 100vw;
+        grid-column: 1 / 4;
         grid-row: 1 / 2;
 
         #topHeader {
@@ -25,7 +27,7 @@
     }
 
     nav {
-        display: block;
+        display: none;
         ul {
             position: fixed;
             bottom: 3rem;
@@ -53,7 +55,7 @@
     }
 
     footer {
-        grid-row-start: 6;
-        grid-column: 1 / 6;
+        grid-row-start: 4;
+        grid-column: 1 / 4;
     }
 }

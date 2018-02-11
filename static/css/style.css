@@ -428,11 +428,13 @@ body {
   font-family: "Martel", serif; }
   body #grid-wrapper {
     display: grid;
-    grid-template: repeat(4, auto)/2fr 8fr 1fr; }
+    grid-template-columns: 2fr 8fr 1fr;
+    grid-gap: 0 0; }
     body #grid-wrapper header {
       position: sticky;
       top: 0;
-      grid-column: 1 / 6;
+      width: 100vw;
+      grid-column: 1 / 4;
       grid-row: 1 / 2; }
       body #grid-wrapper header #topHeader {
         display: flex;
@@ -446,7 +448,7 @@ body {
         body #grid-wrapper header {
           position: unset; } }
     body #grid-wrapper nav {
-      display: block; }
+      display: none; }
       body #grid-wrapper nav ul {
         position: fixed;
         bottom: 3rem; }
@@ -466,11 +468,12 @@ body {
         flex-direction: row;
         flex-wrap: wrap; }
     body #grid-wrapper footer {
-      grid-row-start: 6;
-      grid-column: 1 / 6; }
+      grid-row-start: 4;
+      grid-column: 1 / 4; }
   body header {
     background-color: #fff;
-    opacity: 1; }
+    opacity: 1;
+    display: inline-block; }
     body header #topHeader .nowrap a {
       padding: 0 1vw; }
     body header #topHeader a {
@@ -507,7 +510,7 @@ body {
         font-size: 1.8rem; } }
     body header .img-container {
       z-index: 4;
-      height: 30vw;
+      height: 10vw;
       background-image: url(https://livingtradition.tech/static/img/stage1.jpg);
       background-position: 0% 75%;
       background-size: 100%;
@@ -540,11 +543,11 @@ body {
       display: block;
       width: 100%;
       height: 100%; }
-  body section#home .blurb {
+  body section#home #blurb {
     text-align: center;
     max-width: 30vw;
     min-width: 12em; }
-    body section#home .blurb p {
+    body section#home #blurb p {
       width: inherit;
       min-width: inherit; }
   body section#about {

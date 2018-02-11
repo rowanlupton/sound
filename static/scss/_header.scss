@@ -5,6 +5,8 @@
 header {
 	background-color: #fff;
 	opacity: 1;
+	display: inline-block;
+	// height: 0;
 	#topHeader {
 		.nowrap a {
 			padding: 0 1vw;
@@ -66,7 +68,7 @@ header {
 
 	.img-container {
 		z-index: 4;
-		height: 30vw;
+		height: 10vw;
 		background-image: url(https://livingtradition.tech/static/img/stage1.jpg);
 		background-position: 0% 75%;
 		background-size: 100%;
