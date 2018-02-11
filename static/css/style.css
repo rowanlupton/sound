@@ -546,7 +546,7 @@ body {
   body section#home #blurb {
     text-align: center;
     max-width: 30vw;
-    min-width: 12em; }
+    min-width: 18rem; }
     body section#home #blurb p {
       width: inherit;
       min-width: inherit; }
