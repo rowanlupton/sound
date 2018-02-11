@@ -2,17 +2,6 @@
 
 @import 'defaultVariables';
 
-body {
-	display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  font-family: $sans-serif-font;
- 
-  .row {
-  	flex: 1;
-  }
-}
-
 footer {
 	color: #ddd;
 	a {

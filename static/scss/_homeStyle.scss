@@ -1,6 +1,6 @@
 // '_homeStyle.scss'
 
-#home.section {
+section#home {
 	.picture {
 		border-radius: 50%;
 		overflow: hidden;
@@ -8,7 +8,9 @@
 		min-width: 12em;
 
 		img {
+			display: block;
 			width: 100%;
+			height: 100%;
 		}
 	}
 
