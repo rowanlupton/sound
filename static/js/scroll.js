@@ -4,10 +4,14 @@ function initialSize () {
 	var headerHeight = document.querySelector('header>#topHeader').clientHeight + 30 * oneVW;
 	var windowHeight = window.innerHeight;
 
-	document.querySelector('header').style.position = 'fixed';
 	document.querySelector('header>.img-container').style.height = '30vw';
-	document.querySelector('nav').style.display = 'block';
-	document.querySelector('section#home').style.marginTop = headerHeight + 'px';
+
+	if (window.innerWidth >= 800) {
+		document.querySelector('header').style.position = 'fixed';
+		document.querySelector('nav').style.display = 'block';
+		document.querySelector('section#home').style.marginTop = headerHeight + 'px';
+	}
+	
 	document.querySelector('section#home').style.minHeight = windowHeight - headerHeight + 'px';
 
 	var newHeaderHeight = document.getElementById('topHeader').clientHeight + 10 * oneVW;
