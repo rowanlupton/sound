@@ -8,19 +8,28 @@ section#contact {
 	div {
 		padding: 5vh 0;
 	}
+	@media (max-width: 576px) {
+		font-size: 0.8em;
+	}	
 
 	color: #fff;
 	background-color: $primary-color;
 	
 	a {
-		color: lighten($secondary-color, 30%);
-
-		@media (max-width: 576px) {
-			font-size: 0.8em;
-		}
-	}
-	a:hover {
+		color: #fff;
 		text-decoration: none;
-		color: lighten($primary-color, 30%);
+
+		
+		&:hover {
+			.fa {
+				color: darken($secondary-color, 10%);
+				text-shadow: 0 0 20px lighten($secondary-color, 20%);
+			}
+		}
+		.fa {
+			transition-property: color, text-shadow;
+			transition-duration: 0.25s;
+			text-shadow: none;
+		}
 	}
 }

@@ -474,40 +474,44 @@ body {
     background-color: #fff;
     opacity: 1;
     display: inline-block; }
-    body header #topHeader .nowrap a {
-      padding: 0 1vw; }
-    body header #topHeader a {
-      font-size: 2.5vw;
-      display: inline-block; }
-      body header #topHeader a .h {
-        text-align: center;
+    body header #topHeader {
+      background-color: #fff;
+      opacity: 1;
+      width: 100vw; }
+      body header #topHeader .nowrap a {
+        padding: 0 1vw; }
+      body header #topHeader a {
+        font-size: 2.5vw;
         display: inline-block; }
-        body header #topHeader a .h [class*="brand"] {
-          margin: 0; }
-        body header #topHeader a .h h1 {
-          font-size: 3rem;
-          text-transform: lowercase;
-          color: #8a68b9;
-          transition: color 0.25s; }
-        body header #topHeader a .h h2 {
-          font-size: 1.4rem;
-          text-transform: uppercase;
-          color: #696BB2;
-          transition: color 0.25s;
-          margin-top: 15px; }
-        body header #topHeader a .h:hover h1 {
-          color: #9c9dcc;
-          transition: color 0.25s; }
-        body header #topHeader a .h:hover h2 {
-          color: #b39cd1;
-          transition: color 0.25s; }
-    @media only screen and (max-width: 991px) {
-      body header #topHeader a, body header #topHeader h1 {
-        font-size: 1.4rem; }
-      body header #topHeader h2 {
-        font-size: 0.9rem; }
-      body header #topHeader .fa {
-        font-size: 1.8rem; } }
+        body header #topHeader a .h {
+          text-align: center;
+          display: inline-block; }
+          body header #topHeader a .h [class*="brand"] {
+            margin: 0; }
+          body header #topHeader a .h h1 {
+            font-size: 3rem;
+            text-transform: lowercase;
+            color: #8a68b9;
+            transition: color 0.25s; }
+          body header #topHeader a .h h2 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            color: #696BB2;
+            transition: color 0.25s;
+            margin-top: 15px; }
+          body header #topHeader a .h:hover h1 {
+            color: #9c9dcc;
+            transition: color 0.25s; }
+          body header #topHeader a .h:hover h2 {
+            color: #b39cd1;
+            transition: color 0.25s; }
+      @media only screen and (max-width: 991px) {
+        body header #topHeader a, body header #topHeader h1 {
+          font-size: 1.4rem; }
+        body header #topHeader h2 {
+          font-size: 0.9rem; }
+        body header #topHeader .fa {
+          font-size: 1.8rem; } }
     body header .img-container {
       z-index: 4;
       height: 10vw;
@@ -569,17 +573,22 @@ body {
       height: auto; }
     body section#contact div {
       padding: 5vh 0; }
+    @media (max-width: 576px) {
+      body section#contact {
+        font-size: 0.8em; } }
     body section#contact a {
-      color: #cecfe6; }
-      @media (max-width: 576px) {
-        body section#contact a {
-          font-size: 0.8em; } }
-    body section#contact a:hover {
-      text-decoration: none;
-      color: #dbd1e9; }
+      color: #fff;
+      text-decoration: none; }
+      body section#contact a:hover .fa {
+        color: #4f5199;
+        text-shadow: 0 0 20px #acaed5; }
+      body section#contact a .fa {
+        transition-property: color, text-shadow;
+        transition-duration: 0.25s;
+        text-shadow: none; }
   body section h2 {
     font-size: 2rem; }
-  body section p {
+  body section p, body section div {
     font-size: 1.3rem; }
   body section.full-height {
     padding: 1em;

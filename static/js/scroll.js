@@ -10,6 +10,13 @@ function initialSize () {
 		document.querySelector('header').style.position = 'fixed';
 		document.querySelector('nav').style.display = 'block';
 		document.querySelector('section#home').style.marginTop = headerHeight + 'px';
+	} else {
+		var topHeader = document.getElementById('topHeader');
+		var imgContainer = document.querySelector('header>.img-container');
+		topHeader.style.position = 'fixed';
+		imgContainer.style.marginTop = topHeader.clientHeight + 'px';
+		// imgContainer.style.position = 'sticky';
+		// imgContainer.style.top = 0; //topHeader.clientHeight + 'px';
 	}
 	
 	document.querySelector('section#home').style.minHeight = windowHeight - headerHeight + 'px';
@@ -28,7 +35,11 @@ function scroll () {
 	var currentScroll = window.scrollY;
 	var oneVW = 0.01 * window.innerWidth;
 
-	var breakPoint = 20 * oneVW;
+	if (window.innerWidth >= 800) {
+		var breakPoint = 20 * oneVW;
+	} else {
+		var breakPoint = 29 * oneVW;
+	}
 
 	console.log(currentScroll)
 
