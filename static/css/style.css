@@ -579,10 +579,10 @@ body {
     body section#contact a {
       color: #fff;
       text-decoration: none; }
-      body section#contact a:hover .fa {
+      body section#contact a:hover .fab, body section#contact a:hover .fas {
         color: #4f5199;
         text-shadow: 0 0 20px #acaed5; }
-      body section#contact a .fa {
+      body section#contact a .fab, body section#contact a .fas {
         transition-property: color, text-shadow;
         transition-duration: 0.25s;
         text-shadow: none; }
